@@ -5,6 +5,7 @@ module Vendors
     before_action :set_vendor, :authorize_vendor, :set_record_source
 
     def new
+      @default = Bundle.find(params['default'])
       add_breadcrumb 'Add Patient', :new_admin_bundle_path, only: [:new]
     end
 

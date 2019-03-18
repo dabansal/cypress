@@ -103,7 +103,7 @@ class RecordsController < ApplicationController
 
   # sets the record source to product_test for the patients for a measure test
   def set_record_source_vendor
-    @bundle = Bundle.default
+    @bundle = params[:bundle_id] ? Bundle.available.find(params[:bundle_id]) : Bundle.default
     @vendor = Vendor.find(params[:vendor_id])
     @source = @vendor
     breadcrumbs_for_vendor_path
