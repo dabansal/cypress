@@ -61,7 +61,7 @@ module Vendors
 
       # import
       patient = QRDA::Cat1::PatientImporter.instance.parse_cat1(doc)
-      patient.update(_type: CQM::VendorPatient, correlation_id: params[:vendor_id])
+      patient.update(_type: CQM::VendorPatient, correlation_id: params[:vendor_id], bundleId: @bundle.id)
       patient
     end
 

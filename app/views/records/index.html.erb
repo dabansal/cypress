@@ -22,7 +22,7 @@
 <% else %>
   <%# add patients option #%>
   <% if @vendor %>
-    <% @patients = @vendor.patients %>
+    <% @patients = @vendor.patients.select{ |p| p.bundleId == @bundle.id.to_s } %>
     <%= button_to "+ Import Patients", new_vendor_record_path(@vendor.id), :method => :get, :params => {default: @bundle}, :class => "btn btn-primary pull-right" %>
     <h1>Patient List</h1>
     <div class="row">

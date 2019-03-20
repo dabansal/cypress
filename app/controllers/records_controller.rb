@@ -14,10 +14,8 @@ class RecordsController < ApplicationController
 
     return redirect_to bundle_records_path(Bundle.default) unless params[:bundle_id] || params[:task_id] || params[:vendor_id]
 
-    # TODO: Only show measures where there are patient results. CMS32v4 sub id c and d have no patients, for example.
-    @patients = @source.patients.order_by(first: 'asc')
-
     unless @vendor
+      @patients = @source.patients.order_by(first: 'asc')
       # create json with the display_name and url for each measure
       @measure_dropdown = Rails.cache.fetch("#{@source.cache_key}/measure_dropdown") do
         @source.measures
@@ -76,13 +74,14 @@ class RecordsController < ApplicationController
 
   private
 
+# note: case vendor will also have a bundle id
   def set_record_source
-    if params[:bundle_id]
-      set_record_source_bundle
+    if params[:vendor_id]
+      set_record_source_vendor
     elsif params[:task_id]
       set_record_source_product_test
-    elsif params[:vendor_id]
-      set_record_source_vendor
+    elsif params[:bundle_id]
+      set_record_source_bundle
     else
       # TODO: figure out what scenarios lead to this branch and fix them
       @bundle = Bundle.default
