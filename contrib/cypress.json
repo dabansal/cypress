@@ -91,7 +91,7 @@
       "iso_urls": [
         "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
-      "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
+      "iso_checksum": "aa9606eb8c0bbce00552907f541547c4c510134f",
       "iso_checksum_type": "sha1",
       "ssh_username": "{{user `default_user`}}",
       "ssh_password": "{{user `default_pwd`}}",
@@ -151,7 +151,7 @@
       "iso_urls": [
         "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
-      "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
+      "iso_checksum": "aa9606eb8c0bbce00552907f541547c4c510134f",
       "iso_checksum_type": "sha1",
       "ssh_username": "{{user `default_user`}}",
       "ssh_password": "{{user `default_pwd`}}",
@@ -211,7 +211,7 @@
       "iso_urls": [
         "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
-      "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
+      "iso_checksum": "aa9606eb8c0bbce00552907f541547c4c510134f",
       "iso_checksum_type": "sha1",
       "ssh_username": "{{user `default_user`}}",
       "ssh_password": "{{user `default_pwd`}}",
