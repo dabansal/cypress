@@ -4,8 +4,8 @@
     "aws_secret_key": "",
     "default_user": "ubuntu",
     "default_pwd": "CypressPwd",
-    "cypress_version": "v4.0.2",
-    "cvu_version": "v4.0.2",
+    "cypress_version": "v4.0.3",
+    "cvu_version": "v4.0.3",
     "chef_version": "13.8.5",
     "vpc_id": "",
     "subnet_id": ""
@@ -89,8 +89,7 @@
       "type": "vmware-iso",
       "guest_os_type": "ubuntu-64",
       "iso_urls": [
-        "http://releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso",
-        "http://nl.releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso"
+        "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
       "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
       "iso_checksum_type": "sha1",
@@ -150,8 +149,7 @@
       "type": "vmware-iso",
       "guest_os_type": "ubuntu-64",
       "iso_urls": [
-        "http://releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso",
-        "http://nl.releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso"
+        "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
       "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
       "iso_checksum_type": "sha1",
@@ -211,8 +209,7 @@
       "type": "vmware-iso",
       "guest_os_type": "ubuntu-64",
       "iso_urls": [
-        "http://releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso",
-        "http://nl.releases.ubuntu.com/16.04.5/ubuntu-16.04.5-server-amd64.iso"
+        "http://releases.ubuntu.com/18.04/ubuntu-18.04.2-live-server-amd64.iso"
       ],
       "iso_checksum": "ee32c555567dd5407c58a1cfc7e668ab37a99d99",
       "iso_checksum_type": "sha1",
