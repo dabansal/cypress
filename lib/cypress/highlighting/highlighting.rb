@@ -1,13 +1,14 @@
 class Highlighting < Mustache
 
     class HighlightObject
-        attr_accessor :description, :colored, :isTrue, :statement_name, :isClauseStart, :isClauseEnd
+        attr_accessor :description, :colored, :isTrue, :statement_name, :isClauseStart, :isClauseEnd, :localId
 
-        def initialize(description, colored, isTrue, statement_name)
+        def initialize(description, colored, isTrue, statement_name, localId)
             self.description = description
             self.colored = colored
             self.isTrue = isTrue
             self.statement_name = statement_name
+            self.localId = localId
         end
     end
 
@@ -88,9 +89,9 @@ class Highlighting < Mustache
                 result = results.find { |res| res.userId == r }
                 unless result.nil?
                     if result.isTrue.eql?("NA")
-                        @highlightObject << HighlightObject.new(text, false, false, result.statement_name)
+                        @highlightObject << HighlightObject.new(text, false, false, result.statement_name, result.userId)
                     else
-                        @highlightObject << HighlightObject.new(text, true, ActiveModel::Type::Boolean.new.cast(result.isTrue), result.statement_name)
+                        @highlightObject << HighlightObject.new(text, true, ActiveModel::Type::Boolean.new.cast(result.isTrue), result.statement_name, result.userId)
                         print result.isTrue + "\n" 
                     end
                 end

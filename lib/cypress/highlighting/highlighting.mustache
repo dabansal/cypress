@@ -17,14 +17,14 @@
                     {{/isClauseStart}}                    
                     {{#colored}}                
                         {{#isTrue}} 
-                            <span style="background-color:green"> 
+                            <span id="{{{statement_name}}}_{{{localId}}}" style="background-color:green"> 
                         {{/isTrue}}
                         {{^isTrue}} 
-                            <span style="background-color:red"> 
+                            <span id="{{{statement_name}}}_{{{localId}}}" style="background-color:red"> 
                         {{/isTrue}}
                     {{/colored}}  
                     {{^colored}}  
-                        <span style> 
+                        <span id="{{{statement_name}}}_{{{localId}}}"> 
                     {{/colored}}  
                     {{description}} 
                     </span>
